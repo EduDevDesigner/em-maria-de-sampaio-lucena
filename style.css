@@ -55,6 +55,12 @@ body {
     font-size: 34px;
 }
 
+.school-icon img {
+    width: 68px;
+    height: 68px;
+    object-fit: contain;
+}
+
 h1 {
     text-align: center;
     color: var(--primary-dark);
