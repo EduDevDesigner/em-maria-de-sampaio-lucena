@@ -1,0 +1,254 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary: #176b45;
+    --primary-dark: #0554ba;
+    --accent: #f2c94c;
+    --background: #f3f7f4;
+    --text: #24332b;
+    --muted: #68756e;
+    --border: #d8e1db;
+    --error: #c62828;
+    --white: #ffffff;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background:
+        radial-gradient(circle at top right, rgba(242, 201, 76, 0.18), transparent 30%),
+        linear-gradient(135deg, #eef7f1 0%, #f8faf9 100%);
+    min-height: 100vh;
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+}
+
+.card {
+    width: 100%;
+    max-width: 520px;
+    background: var(--white);
+    border-radius: 24px;
+    padding: 34px 30px 24px;
+    box-shadow: 0 15px 45px rgba(24, 57, 40, 0.12);
+    border: 1px solid rgba(23, 107, 69, 0.08);
+}
+
+.school-icon {
+    width: 68px;
+    height: 68px;
+    margin: 0 auto 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #e9f5ee;
+    font-size: 34px;
+}
+
+h1 {
+    text-align: center;
+    color: var(--primary-dark);
+    font-size: clamp(24px, 6vw, 32px);
+    line-height: 1.15;
+}
+
+.subtitle {
+    text-align: center;
+    margin-top: 7px;
+    color: var(--primary-dark);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.intro {
+    margin: 24px 0;
+    padding: 16px;
+    background: #f4f8f5;
+    border-left: 4px solid var(--accent);
+    border-radius: 10px;
+}
+
+.intro p {
+    color: #526158;
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+.field {
+    margin-bottom: 17px;
+}
+
+label:not(.consentimento) {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="tel"] {
+    width: 100%;
+    min-height: 50px;
+    padding: 13px 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-size: 16px;
+    color: var(--text);
+    outline: none;
+    transition: 0.2s ease;
+    background: #fff;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(23, 107, 69, 0.10);
+}
+
+input.invalid {
+    border-color: var(--error);
+}
+
+.consentimento {
+    display: flex;
+    gap: 11px;
+    align-items: flex-start;
+    margin: 20px 0 4px;
+    cursor: pointer;
+    color: #4d5a52;
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+.consentimento input {
+    width: 19px;
+    height: 19px;
+    flex: 0 0 auto;
+    margin-top: 1px;
+    accent-color: var(--primary);
+}
+
+.error {
+    display: block;
+    min-height: 0;
+    margin-top: 5px;
+    color: var(--error);
+    font-size: 12px;
+}
+
+.btn {
+    width: 100%;
+    min-height: 54px;
+    margin-top: 15px;
+    border: 0;
+    border-radius: 12px;
+    background: var(--primary);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.btn:hover {
+    background: var(--primary-dark);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.whatsapp {
+    background: #176b45;
+}
+
+.secundario {
+    background: #edf1ee;
+    color: var(--text);
+}
+
+.secundario:hover {
+    background: #e0e7e2;
+}
+
+.sucesso {
+    text-align: center;
+}
+
+.check {
+    width: 62px;
+    height: 62px;
+    margin: 8px auto 16px;
+    border-radius: 50%;
+    background: #e7f5ed;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.sucesso h2 {
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+}
+
+.sucesso p {
+    color: var(--muted);
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+.privacy {
+    margin-top: 22px;
+    text-align: center;
+    color: #7a857e;
+    font-size: 11px;
+    line-height: 1.45;
+}
+
+footer {
+    margin-top: 20px;
+    padding-top: 17px;
+    border-top: 1px solid #edf0ee;
+    text-align: center;
+    color: #89938d;
+    font-size: 12px;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 480px) {
+    .page {
+        padding: 12px;
+        align-items: flex-start;
+    }
+
+    .card {
+        margin-top: 8px;
+        padding: 27px 19px 20px;
+        border-radius: 20px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+}
