@@ -1,32 +1,76 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Cadastro para receber comunicados da EMTI Maria de Sampaio Lucena pelo WhatsApp.">
-    <title>WhatsApp da Escola | EMTI Maria de Sampaio Lucena</title>
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Cadastro para receber comunicados da EMTI Maria de Sampaio Lucena pelo WhatsApp.">
+
+    <title>
+        WhatsApp da Escola | EMTI Maria de Sampaio Lucena
+    </title>
+
     <link rel="stylesheet" href="style.css">
+
 </head>
+
+
 <body>
+
     <main class="page">
+
         <section class="card">
+
+
             <div class="school-icon" aria-hidden="true">
-                <img src="Logo.jpg" alt="Logo da EMTI Maria de Sampaio Lucena">
+
+                <img
+                    src="Logo.jpg"
+                    alt="Logo da EMTI Maria de Sampaio Lucena">
+
             </div>
 
-            <h1>EMTI Maria de Sampaio Lucena</h1>
-            <p class="subtitle">WhatsApp da Escola</p>
+
+            <h1>
+                EMTI Maria de Sampaio Lucena
+            </h1>
+
+
+            <p class="subtitle">
+                WhatsApp da Escola
+            </p>
+
 
             <div class="intro">
+
                 <p>
-                    Cadastre seus dados para entrar em contato com a escola
-                    e receber comunicados importantes pelo WhatsApp.
+
+                    Cadastre seus dados para entrar em contato
+                    com a escola e receber comunicados importantes
+                    pelo WhatsApp.
+
                 </p>
+
             </div>
 
+
+
             <form id="cadastroForm" novalidate>
+
+
+                <!-- NOME DO RESPONSÁVEL -->
+
                 <div class="field">
-                    <label for="responsavel">Nome do responsável</label>
+
+                    <label for="responsavel">
+                        Nome do responsável
+                    </label>
+
                     <input
                         type="text"
                         id="responsavel"
@@ -36,11 +80,24 @@
                         maxlength="100"
                         required
                     >
-                    <small class="error" id="erroResponsavel"></small>
+
+                    <small
+                        class="error"
+                        id="erroResponsavel">
+                    </small>
+
                 </div>
 
+
+
+                <!-- NOME DO ALUNO -->
+
                 <div class="field">
-                    <label for="aluno">Nome do aluno</label>
+
+                    <label for="aluno">
+                        Nome do aluno
+                    </label>
+
                     <input
                         type="text"
                         id="aluno"
@@ -49,24 +106,106 @@
                         maxlength="100"
                         required
                     >
-                    <small class="error" id="erroAluno"></small>
+
+                    <small
+                        class="error"
+                        id="erroAluno">
+                    </small>
+
                 </div>
 
+
+
+                <!-- TURMA -->
+
                 <div class="field">
-                    <label for="turma">Turma</label>
-                    <input
-                        type="text"
+
+                    <label for="turma">
+                        Turma
+                    </label>
+
+                    <select
                         id="turma"
                         name="turma"
-                        placeholder="Ex.: 6º Ano A"
-                        maxlength="40"
-                        required
-                    >
-                    <small class="error" id="erroTurma"></small>
+                        required>
+
+                        <option value="">
+                            Selecione a turma
+                        </option>
+
+                        <option value="6º Ano A">
+                            6º Ano A
+                        </option>
+
+                        <option value="6º Ano B">
+                            6º Ano B
+                        </option>
+
+                        <option value="7º Ano A">
+                            7º Ano A
+                        </option>
+
+                        <option value="7º Ano B">
+                            7º Ano B
+                        </option>
+                        
+                        <option value="7º Ano C">
+                            7º Ano C
+                        </option>
+                        
+                        <option value="7º Ano D">
+                            7º Ano D
+                        </option>
+                        
+                        <option value="8º Ano A">
+                            8º Ano A
+                        </option>
+                        
+                        <option value="8º Ano B">
+                            8º Ano B
+                        </option>
+                        
+                        <option value="8º Ano C">
+                            8º Ano C
+                        </option>
+                        
+                        <option value="8º Ano D">
+                            8º Ano D
+                        </option>
+                        
+                        <option value="9º Ano A">
+                            9º Ano A
+                        </option>
+                        
+                        <option value="9º Ano B">
+                            9º Ano B
+                        </option>
+                        
+                        <option value="9º Ano C">
+                            9º Ano C
+                        </option>
+
+
+
+                    </select>
+
+                    <small
+                        class="error"
+                        id="erroTurma">
+                    </small>
+
                 </div>
 
+
+
+                <!-- WHATSAPP -->
+
                 <div class="field">
-                    <label for="telefone">Seu WhatsApp</label>
+
+                    <label for="telefone">
+                        Seu WhatsApp
+                    </label>
+
                     <input
                         type="tel"
                         id="telefone"
@@ -76,51 +215,140 @@
                         maxlength="15"
                         required
                     >
-                    <small class="error" id="erroTelefone"></small>
+
+                    <small
+                        class="error"
+                        id="erroTelefone">
+                    </small>
+
                 </div>
 
-                <label class="consentimento">
-                    <input type="checkbox" id="consentimento" required>
-                    <span>
-                        Autorizo a EMTI Maria de Sampaio Lucena a utilizar este
-                        número para comunicações relacionadas às atividades e
-                        informações da escola.
-                    </span>
-                </label>
-                <small class="error" id="erroConsentimento"></small>
 
-                <button type="submit" class="btn">
+
+                <!-- AUTORIZAÇÃO -->
+
+                <label class="consentimento">
+
+                    <input
+                        type="checkbox"
+                        id="consentimento"
+                        required
+                    >
+
+                    <span>
+
+                        Autorizo a EMTI Maria de Sampaio Lucena
+                        a utilizar este número para comunicações
+                        relacionadas às atividades e informações
+                        da escola.
+
+                    </span>
+
+                </label>
+
+
+                <small
+                    class="error"
+                    id="erroConsentimento">
+                </small>
+
+
+
+                <!-- BOTÃO -->
+
+                <button
+                    type="submit"
+                    class="btn">
+
                     <span>💬</span>
+
                     Entrar no WhatsApp da Escola
+
                 </button>
+
+
             </form>
 
-            <div id="sucesso" class="sucesso" hidden>
-                <div class="check">✓</div>
-                <h2>Cadastro preenchido!</h2>
+
+
+            <!-- SUCESSO -->
+
+            <div
+                id="sucesso"
+                class="sucesso"
+                hidden>
+
+
+                <div class="check">
+                    ✓
+                </div>
+
+
+                <h2>
+                    Cadastro preenchido!
+                </h2>
+
+
                 <p>
-                    Agora toque no botão abaixo para abrir o WhatsApp da escola
-                    e enviar sua mensagem.
+
+                    Agora toque no botão abaixo para abrir
+                    o WhatsApp da escola e enviar sua mensagem.
+
                 </p>
-                <a id="abrirWhatsApp" class="btn whatsapp" href="#" target="_blank" rel="noopener">
+
+
+                <a
+                    id="abrirWhatsApp"
+                    class="btn whatsapp"
+                    href="#"
+                    target="_blank"
+                    rel="noopener">
+
                     💬 Abrir WhatsApp
+
                 </a>
-                <button type="button" id="voltar" class="btn secundario">
+
+
+                <button
+                    type="button"
+                    id="voltar"
+                    class="btn secundario">
+
                     Voltar
+
                 </button>
+
+
             </div>
 
+
+
+            <!-- PRIVACIDADE -->
+
             <p class="privacy">
-                Seus dados não são armazenados por esta página. Eles são usados
-                apenas para montar a mensagem que será enviada pelo WhatsApp.
+
+                Seus dados não são armazenados por esta página.
+                Eles são usados apenas para montar a mensagem
+                que será enviada pelo WhatsApp.
+
             </p>
 
+
+
             <footer>
+
                 EMTI Maria de Sampaio Lucena
+
             </footer>
+
+
         </section>
+
     </main>
 
+
     <script src="script.js"></script>
+
 </body>
+
 </html>
